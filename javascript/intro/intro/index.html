@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script Intro</title>
+</head>
+<body>
+	<script>
+		// Самовызывающие функции
+		(function () {
+			console.log('Hello World');
+		}());
+
+		(function(n){
+			let result = 1;
+			for (let i=1; i<=n; i++) {
+				result *= i;
+			}
+			console.log('Факториал числа '+ n +' равен ' + result);
+		}(5));
+
+		// стрелочные функции
+		let sum = (x, y) => x + y;
+		console.log(sum(4, 5));
+		console.log(sum(10, 15));
+
+		let squere = n => n * n;
+		console.log(squere(6));
+
+		// Не обезательные параметры 
+		function display(x, y) {
+
+			if (y === undefined) {
+				y = 5;
+			} 
+			if (x === undefined) {
+				x = 8;
+			}
+
+			let z = x * y;
+			console.log(z);
+		}
+
+		function displayDefault( x, y, z = 6) {
+			
+			// let z = x * y;
+			// console.log(z);
+		}
+
+		displayDefault(5, 6);
+
+		display(); // 40
+		display(6); // ...30
+
+		// массив аргументов
+		function displayArguments(){
+			let z = 1;
+			for (let i = 0; i < arguments.length; i++) {
+				z *= arguments[i];
+			}
+			return z;
+		}
+		displayArguments(5, 6, 7, 8);
+
+		// Неопределенное количество аргументов
+		function displayNonCount(season, ...temps) {
+			console.log(season);
+			for (index in temps) {
+				console.log(temps[index]);
+			}
+		}
+
+		displayNonCount('Весна', (45 + 67), 'Март', 'Апрель', 'Май');
+
+	</script>
+</body>
+</html>

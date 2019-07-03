@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        // 1.
+       /* function Compare(x, y) {
+            if(x > y)
+                return 1;
+            else if (x==y)
+                return 0;
+            else
+                return -1;
+        }
+        console.log(Compare(6, 8));*/
+       // 2.
+  /*      function Factorial(n) {
+            let f = 1;
+            for (let i = 1; i < n + 1; i++ ){
+                f *= i;
+            }
+            return f;
+        }
+        console.log(Factorial(5));*/
+        // 3.
+        /*function ConcatDigit(a, b, c) {
+            let str = a.toString() + b.toString() + c.toString();
+            return +str;
+        }
+        console.log(ConcatDigit(1, 2, 3));*/
+        // 4.
+        /*function Square(a, b) {
+            if(b == undefined) {
+                return a * a;
+            }
+            else {
+                return a * b;
+            }
+        }
+        console.log(Square(4));
+        console.log(Square(4, 5));*/
+        // 5.
+       /* function IsExtraBest(x) {
+            if (x != undefined) {
+                let res = 0;
+
+                for (let i = 0; i < x; i++) {
+                    if (x % i == 0) {
+                        res += i;
+                    }
+                }
+                if (x == res) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        /!*console.log(IsExtraBest(6));
+        console.log(IsExtraBest(9));*!/
+        // 6.
+        let CheckExtraBestDiapason = (x, y) => {
+            for (let i = x; i < y + 1; i++) {
+                if (IsExtraBest(i)) {
+                    return `Number ${i} is the extra-best`;
+                }
+            }
+        }
+        console.log(CheckExtraBestDiapason(1, 121));*/
+        // 7.
+ /*       function GetTime(hours, minutes, seconds) {
+            if (hours == undefined) {
+                hours = '00';
+            }
+            if (minutes == undefined) {
+                minutes = '00';
+            }
+            if (seconds == undefined) {
+                seconds = '00';
+            }
+            if (hours < 10 && hours > 0) {
+                hours = '0' + hours.toString();
+            }
+            if (minutes < 10 && minutes > 0) {
+                minutes = '0' + minutes.toString();
+            }
+            if (seconds < 10 && seconds > 0) {
+                seconds = '0' + seconds.toString();
+            }
+            return hours.toString()+':'+minutes.toString()+':'+seconds.toString();
+        }
+        console.log(GetTime(1,2,3));
+        console.log(GetTime());*/
+        // 8.
+        /*function GetSeconds( h, m, s) {
+            if (h == undefined) {
+                h = 0;
+            }
+            if (m == undefined) {
+                m = 0;
+            }
+            if (s == undefined) {
+                s = 0;
+            }
+            return (+ h) * 3600 + (+ m) * 60 + (+ s);
+        }*/
+        //console.log(GetSeconds(1, 20, 15));
+        // 9.
+        /*function GetTimeFromSeconds(s) {
+            let h = 0;
+            let m = 0;
+            if(s >= 3600) {
+                h = parseInt(s / 3600);
+                m = parseInt((s % 3600) / 60);
+                s = (s % 3600) % 60;
+            }
+            else if (s < 3600 && s >= 60) {
+                let h = 0;
+                let m = parseInt(s / 60);
+                s %=  60;
+            }
+            if (h < 10) {
+                h = '0' + h.toString();
+            }
+            if (m < 10) {
+                m = '0' + m.toString();
+            }
+            if (s < 10) {
+                s = '0' + s.toString();
+            }
+            return h.toString() + ':' + m.toString() + ':' + s.toString();
+        }*/
+        //console.log(GetTimeFromSeconds(7537));
+        //console.log(GetTimeFromSeconds(1732));
+        //console.log(GetTimeFromSeconds(47));
+        // 10.
+        /*function GetDifferenceTime(h1, m1, s1, h2, m2, s2) {
+            let seckonds = GetSeconds(h2, m2, s2) - GetSeconds(h1, m1, s1);
+            return GetTimeFromSeconds(seckonds);
+        }
+        console.log(GetDifferenceTime(8,24,0,11,50,0));*/
+        // 11.
+        /*let AVG = (x, y, z) => (x + y + z)/ 3;
+        console.log(AVG(1, 3, 7));*/
+        /*let Add = (x, y) => x + y;
+        let  Sub = (x, y) => x - y;
+        let Mul = (x, y) => x * y;
+        let Div = (x, y) => {
+            if (y == 0) {
+                return 'ERROR';
+            }
+            return x / y;
+        }
+        function Calculator() {
+            let x = parseInt(prompt('Enter first number'));
+            let y = parseInt(prompt('Enter second number'));
+            let operation = prompt('Enter an operation');
+            switch (operation) {
+                case '+': {console.log(Add(x, y))} break;
+                case '-': {console.log((Sub(x, y)))} break;
+                case '*': {console.log(Mul(x, y))} break;
+                case '/': {console.log(Div(x, y))} break;
+                default: {console.log('Not correct operation')} break;
+            }
+        }
+        Calculator();*/
+ /*       function GetNumberInfo(x) {
+            let msg = '';
+            if (x > 0) {
+                msg += `Number ${x} is positive`;
+            }
+            else if (x < 0) {
+                msg += `Number ${x} is negative`;
+            }
+            else {
+                return 'This is zero!';
+            }
+            let flag = false;
+            for (let i = 2; i < x; i++) {
+                flag = true;
+                if (x % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                msg += ', simple';
+            }
+            else {
+                msg += ', not simple';
+            }
+            if (x % 2 == 0) {
+                msg += ', multiple to 2';
+            }
+            if (x % 3 == 0) {
+                msg += ', multiple to 3';
+            }
+            if (x % 5 == 0) {
+                msg += ', multiple to 5';
+            }
+            if (x % 6 == 0) {
+                msg += ', multiple to 6';
+            }
+            if (x % 9 == 0) {
+                msg += ', multiple to 9';
+            }
+            return msg;
+        }
+        console.log(GetNumberInfo(270));*/
+    </script>
+</body>
+</html>

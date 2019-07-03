@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>java vstr 3</title>
+</head>
+<body>
+<script>
+    // Задание 1 Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе; 1 – если первое
+    // больше, чем второе; и 0 – если числа равны.
+
+    // function Compare(x, y) {
+    //     if(x > y)
+    //         return 1;
+    //     else if (x==y)
+    //         return 0;
+    //     else
+    //         return -1;
+    // }
+    // console.log(Compare(10, 8));
+
+
+
+    // Задание 2 Написать функцию, которая вычисляет факториал переданного ей числа.
+    //     function Factorial(n) {
+    //     let f = 1;
+    //     for (let i = 1; i < n + 1; i++ ){
+    //         f *= i;
+    //     }
+    //     return f;
+    // }
+    // console.log(Factorial(10));
+
+
+
+    // Задание 3 Написать функцию, которая принимает три отдельные
+    // цифры и превращает их в одно число. Например: цифры
+    // 1, 4, 9 превратятся в число 149.
+    // function numb(a, b, c) {
+    //     let str = a.toString() + b.toString() + c.toString();
+    //     return ++str;
+    // }
+    // console.log(numb(1, 2, 3));
+
+
+
+    // Задание 4 Написать функцию, которая принимает длину и ширину
+    // прямоугольника и вычисляет его площадь. Если в функцию
+    // передали 1 параметр, то она вычисляет площадь квадрата.
+    // function square(a, b) {
+    //     if(b == undefined) {
+    //         return a * a;
+    //     }
+    //     else {
+    //         return a * b;
+    //     }
+    // }
+    // console.log(square(1));
+    // console.log(square(2, 3));
+
+
+
+    // Задание 5 Написать функцию, которая проверяет, является ли переданное ей число совершенным. Совершенное число – это
+    // число, равное сумме всех своих собственных делителей.
+    // function perfect(x) {
+    //     if (x != undefined) {
+    //         let sum = 0;
+    //
+    //         for (let i = 0; i < x; i++) {
+    //             if (x % i == 0) {
+    //                 sum += i;
+    //             }
+    //         }
+    //         if (x == sum) {
+    //             return 'numb ' + x + ' perfect';
+    //         }
+    //         else {
+    //             return 'numb ' + x + ' not perfect';
+    //         }
+    //     }
+    // }
+    // console.log(perfect(28));
+    // console.log(perfect(12));
+
+
+
+    // Задание 6 Написать функцию, которая принимает минимальное и
+    // максимальное значения для диапазона, и выводит только
+    // те числа из диапазона, которые являются совершенными.
+    //     Используйте написанную ранее функцию, чтобы узнавать,
+    //     совершенное число или нет
+    // function perfect(x) {
+    //         if (x != undefined) {
+    //             let sum = 0;
+    //
+    //             for (let i = 0; i < x; i++) {
+    //                 if (x % i == 0) {
+    //                     sum += i;
+    //                 }
+    //             }
+    //             if (x == sum) {
+    //                 return true;
+    //             }
+    //             else {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    // function numberperfect(x, y) {
+    //     let numbers = '';
+    //     for (let i = x; i <= y; i++) {
+    //         if (perfect(i)) {
+    //             numbers += i.toString() + " ";
+    //         }
+    //     }
+    //     return numbers;
+    // }
+    // console.log(numberperfect(1, 10000));
+
+
+
+    // Задание 7 Написать функцию, которая принимает время (часы, минуты, секунды) и выводит его на экран в формате «чч:мм:сс».
+    // Если при вызове функции минуты и/или секунды не были
+    // переданы, то выводить их как 00.
+    // function formattime(h, m, s) {
+    //     if (h == undefined) {
+    //         h = '00';
+    //     }
+    //     if (m == undefined) {
+    //         m = '00';
+    //     }
+    //     if (s == undefined) {
+    //         s = '00';
+    //     }
+    //     if (h < 10 && h > 0) {
+    //         h = '0' + h.toString();
+    //     }
+    //     if (m < 10 && m > 0) {
+    //         m = '0' + m.toString();
+    //     }
+    //     if (s < 10 && s > 0) {
+    //         s = '0' + s.toString();
+    //     }
+    //     return h.toString()+':'+m.toString()+':'+s.toString();
+    // }
+    // console.log(formattime(19,59,59));
+    // console.log(formattime(20));
+
+
+
+    // Задание 8 Написать функцию, которая принимает часы, минуты и
+    // секунды и возвращает это время в секундах
+    // function GetSeconds( h, m, s) {
+    //     if (h == undefined) {
+    //         h = 0;
+    //     }
+    //     if (m == undefined) {
+    //         m = 0;
+    //     }
+    //     if (s == undefined) {
+    //         s = 0;
+    //     }
+    //     return h * 3600 + m * 60 +  s;
+    // }
+    // console.log(GetSeconds(23,59,59));
+
+
+
+    // Задание 9 Написать функцию, которая принимает количество секунд,
+    //     переводит их в часы, минуты и секунды и возвращает в
+    // виде строки «чч:мм:сс».
+    // function GetTimeFromSeconds(s) {
+    //
+    //     let h = parseInt(s / 3600);
+    //     let m = parseInt((s % 3600) / 60);
+    //     s = s % 60;
+    //
+    //     if (h < 10) {
+    //         h = '0' + h.toString();
+    //     }
+    //     if (m < 10) {
+    //         m = '0' + m.toString();
+    //     }
+    //     if (s < 10) {
+    //         s = '0' + s.toString();
+    //     }
+    //     return h.toString() + ':' + m.toString() + ':' + s.toString();
+    // }
+    //
+    // console.log(GetTimeFromSeconds(4444));
+    // console.log(GetTimeFromSeconds(100));
+    // console.log(GetTimeFromSeconds(15));
+
+
+
+    // Задание 10 Написать функцию, которая считает разницу между датами.
+    //     Функция принимает 6 параметров, которые описывают 2
+    // даты, и возвращает результат в виде строки «чч:мм:сс». При
+    // выполнении задания используйте функции из предыдущих 2-х заданий: сначала обе даты переведите в секунды,
+    //     узнайте разницу в секундах, а потом разницу переведите
+    // обратно в «чч:мм:сс».
+    // function GetSeconds( h, m, s) {
+    //         if (h == undefined) {
+    //             h = 0;
+    //         }
+    //         if (m == undefined) {
+    //             m = 0;
+    //         }
+    //         if (s == undefined) {
+    //             s = 0;
+    //         }
+    //         return h * 3600 + m * 60 +  s;
+    //     }
+    //
+    // function GetTimeFromSeconds(s) {
+    //
+    //         let h = parseInt(s / 3600);
+    //         let m = parseInt((s % 3600) / 60);
+    //         s = s % 60;
+    //
+    //         if (h < 10) {
+    //             h = '0' + h.toString();
+    //         }
+    //         if (m < 10) {
+    //             m = '0' + m.toString();
+    //         }
+    //         if (s < 10) {
+    //             s = '0' + s.toString();
+    //         }
+    //         return h.toString() + ':' + m.toString() + ':' + s.toString();
+    //     }
+    //
+    // function GetDifferenceTime(h1, m1, s1, h2, m2, s2) {
+    //     let seckonds = GetSeconds(h2, m2, s2) - GetSeconds(h1, m1, s1);
+    //     return GetTimeFromSeconds(seckonds);
+    // }
+    // console.log(GetDifferenceTime(1,0,0,24,0,0));
+</script>
+
+</body>
+</html>
